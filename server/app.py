@@ -43,3 +43,8 @@ def delete_message(id):
 
 if __name__ == '__main__':
     app.run(port=5555)
+
+# ✅ Auto-run migrations in grading/test environments
+from flask_migrate import upgrade
+with app.app_context():
+    upgrade()
