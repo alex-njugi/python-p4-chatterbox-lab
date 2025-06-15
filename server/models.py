@@ -19,4 +19,4 @@ class Message(db.Model, SerializerMixin):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     # Allow automatic serialization of these fields
-    serialize_rules = ('-updated_at',
+    serialize_rules = ('-updated_at',)
